@@ -31,4 +31,10 @@ export class HomePage {
     async openProfile() {
         await this.page.goto('http://client.qazvms.local/profile');
     }
+
+    async gotoGIS() {
+        
+        await this.page.click('[href="/gis"]');
+    }
+    // timeout = 0
 }

@@ -9,6 +9,10 @@ export class ProfilePage {
         
     }
     
+    async openProfile() {
+        await this.page.click('.MuiToolbar-gutters .MuiIconButton-label');
+        await this.page.click('[href="\/profile"] [tabindex]');
+    }
     async goToUserProfile() {
         await this.page.click('button#vertical-tab-common');
     }
@@ -21,6 +25,15 @@ export class ProfilePage {
     }
     async goToActivity() {
         await this.page.click('button#vertical-tab-activity');
+    }
+    async fioField() {
+        await this.page.click('');
+    }
+    async iinField() {
+        await this.page.click('');
+    }
+    async emailField() {
+        await this.page.click('');
     }
 }
 
