@@ -25,7 +25,7 @@ test('Check User Profile', async ({ page }) => {
         res.body().then(b => {
             console.log(b);
             return b.includes("m.orynbay@srgdev.kz")
-        
+            
         })
     ),
   ])
