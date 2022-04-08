@@ -174,9 +174,45 @@ export class CameraPage {
     }
 
      //Сетки камер
-     async cameraGrid() {
+     async cameraGrid1() {
         await this.page.click('.camera-grid-1');
         
     }
-    
+
+    //Сетки камер
+    async cameraGrid2() {
+        await this.page.click('.camera-grid-2');
+        
+    }
+
+    //Сетки камер
+    async cameraGrid4() {
+        await this.page.click('.camera-grid-4');
+        
+    }
+
+    //Сетки камер
+    async cameraGrid5() {
+        await this.page.click('.camera-grid-5');
+        
+    }
+
+    //Сетки камер
+    async cameraGrid13() {
+        await this.page.click('.camera-grid-13');
+        
+    }
+
+    //Сетки камер
+    async cameraGrid36() {
+        await this.page.click('.camera-grid-36');
+        
+    }
+
+    //Сетки камер
+    async cameraGrid64() {
+        await this.page.click('.camera-grid-64');
+        
+    }
 }
+

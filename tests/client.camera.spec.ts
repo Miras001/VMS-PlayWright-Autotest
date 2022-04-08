@@ -130,7 +130,7 @@ import { CameraPage } from '../pages/client-camera-page';
         console.log(await response.json());
     });
 
-    test('Check Change Camera Current Grid', async ({ page }) => {
+    test.only('Check Change Camera Current Grid', async ({ page }) => {
 
       const homepage = new HomePage(page);
       const locator = page.locator('.MuiAlert-message'); 
@@ -141,6 +141,12 @@ import { CameraPage } from '../pages/client-camera-page';
       await new CameraPage(page).openCurrentGrid()
       await page.reload();
 
+      page.on('websocket', ws => {
+        console.log(`WebSocket opened: ${ws.url()}>`);
+        ws.on('framesent', event => console.log(event.payload));
+        ws.on('framereceived', event => console.log(event.payload));
+        ws.on('close', () => console.log('WebSocket closed'));
+      });
 
       const [response] = await Promise.all([
         page.waitForResponse(res =>

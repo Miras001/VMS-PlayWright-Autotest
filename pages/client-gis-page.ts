@@ -149,7 +149,7 @@ export class GISPage {
         
     }
 
-    //Фильтр Offline
+    //Кнопка слои
     async layersBtn() {
 
         await this.page.click('.leaflet-control-layers-toggle');
@@ -157,7 +157,7 @@ export class GISPage {
         
     }
 
-     //Фильтр Offline
+     //Чекбокс камеры
      async cameraCheckbox() {
 
         await this.page.click('label:nth-of-type(1)>div>span');
@@ -165,7 +165,7 @@ export class GISPage {
         
     }
 
-    //Фильтр Offline
+    //Чекбокс объекты
     async objectCheckbox() {
 
         await this.page.click('label:nth-of-type(2)>div>span');
@@ -173,12 +173,29 @@ export class GISPage {
         
     }
 
-    //Фильтр Offline
+    //Кнопка списка городов
     async cityListBtn() {
 
         await this.page.click('.MuiSvgIcon-colorPrimary');
     
         
     }
+
+    // Камеры на карте 
+    async uncoverCameras() {
+
+        await this.page.click('.leaflet-interactive:nth-child(3)');
+    
+        
+    }
+
+    // Карточка объектов и камер на карте 
+    async objectCard () {
+
+        await this.page.click('.MuiPaper-rounded');
+    
+        
+    }
+
 
 }

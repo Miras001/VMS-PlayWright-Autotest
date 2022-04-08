@@ -8,6 +8,7 @@ export class LoginPage {
     }
 
     async login(email: string, password: string) {
+        await this.page.reload();
         await this.page.type('input[name="email"]', email);
         await this.page.type('input[name="password"]', password);
         await this.page.click('.MuiButton-label');
