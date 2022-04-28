@@ -18,7 +18,7 @@ export class LoginPage {
         await this.page.type('input[type="password"]', noValuepass);
         await this.page.click('button:has-text("Войти в систему")');
     }
-
+          
     async restorePassword(testemail: string) {
         await this.page.click('text=Восстановить пароль');
         await this.page.type('input[type="text"]', testemail);

@@ -191,4 +191,7 @@ import { GISPage } from '../pages/client-gis-page';
 
       await expect(city).toHaveText('Астана');
 
+      await page.screenshot({ path: 'page.png'});
+      await page.screenshot({ path: 'page.png'});
+
     });  

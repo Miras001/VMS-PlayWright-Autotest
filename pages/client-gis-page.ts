@@ -197,5 +197,52 @@ export class GISPage {
         
     }
 
+    // Кнопка Предпросмотр
+    async previewBtn () {
 
+        await this.page.click('button[title="Предпросмотр"]');
+    
+        
+    }
+
+    // Кнопка Архив
+    async archiveBtn () {
+
+        await this.page.click('button[title="Архив"]');
+    
+        
+    }
+
+    // Кнопка Архив
+    async fullScrinBtn () {
+
+        await this.page.click('button[title="Во весь экран"]');
+    
+        
+    }
+
+    // Кнопка увеличить зум 
+    async zoomInBtn () {
+
+        await this.page.click('[title="Zoom in"]');
+    
+        
+    }
+
+     // Кнопка уменьшить зум 
+     async zoomOutBtn () {
+
+        await this.page.click('[title="Zoom out"]');
+    
+        
+    }
+
+    // Кнопка уменьшить зум 
+    async zoomOutBtn12 () {
+
+        await this.page.click('[title="Zoom out"]');
+    
+        
+    }
 }
+
